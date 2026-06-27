@@ -34,6 +34,9 @@ Contoh:
 - Edit atribut `data-phone` pada tombol WhatsApp di [index.html](index.html).
 
 ### 5) Menjalankan lokal
+Ada beberapa cara:
+
+1. Pakai Python (sederhana dan cocok untuk file statis)
 ```bash
 python -m http.server 8000
 ```
@@ -41,6 +44,22 @@ Lalu buka:
 ```text
 http://localhost:8000
 ```
+
+2. Pakai XAMPP / Apache
+- Jalankan Apache di XAMPP.
+- Pindahkan folder project ke `C:\xampp\htdocs\`.
+- Buka browser ke:
+```text
+http://localhost/Web_eco-enzim/
+```
+
+3. Kalau muncul `refused to connect`
+- Pastikan server sudah berjalan.
+- Cek apakah port yang dipakai sudah benar, misalnya `8000` atau `80`.
+- Jika pakai Python, pastikan command berjalan tanpa error.
+- Jika pakai XAMPP, pastikan Apache statusnya Running.
+
+> Jika port 8000 tidak bisa dipakai, coba `python -m http.server 8080` lalu buka `http://localhost:8080`.
 
 ### 6) Deploy ke Cloudflare Pages
 - Pastikan folder `assets/images/` berisi file gambar yang ingin dipakai.

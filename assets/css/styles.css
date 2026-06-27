@@ -15,6 +15,12 @@ img{display:block;max-width:100%}
 .hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:4rem 1rem 3rem;background:radial-gradient(circle at top left, rgba(105,207,255,.35), transparent 28%), linear-gradient(135deg,var(--dark-blue),var(--dark-blue-2));color:#fff;overflow:hidden}
 .hero::before{content:"";position:absolute;inset:0;background:radial-gradient(circle at bottom right, rgba(226,59,59,.25), transparent 28%);pointer-events:none}
 .hero-glow{position:absolute;top:-8%;right:-10%;width:320px;height:320px;border-radius:50%;background:rgba(255,255,255,.12);filter:blur(40px)}
+.leaf-pattern{position:absolute;bottom:-20px;width:220px;height:220px;opacity:.16;pointer-events:none;filter:blur(.3px)}
+.leaf-pattern::before,.leaf-pattern::after{content:"";position:absolute;display:block;background:currentColor;border-radius:70% 0 70% 0;transform:rotate(20deg)}
+.leaf-pattern::before{width:120px;height:170px;left:20px;top:20px}
+.leaf-pattern::after{width:95px;height:135px;left:90px;top:70px;transform:rotate(-25deg)}
+.leaf-left{left:-40px;color:#7ad8ff;transform:rotate(-18deg)}
+.leaf-right{right:-30px;bottom:-40px;color:#4fd78c;transform:rotate(18deg)}
 .hero-inner{position:relative;max-width:980px;z-index:1}
 .brand-block{display:flex;justify-content:center;margin-bottom:1rem}
 .brand-logo{width:78px;height:78px;border-radius:20px;border:2px solid rgba(255,255,255,.2);padding:.45rem;background:rgba(255,255,255,.14);box-shadow:0 10px 25px rgba(0,0,0,.16)}
