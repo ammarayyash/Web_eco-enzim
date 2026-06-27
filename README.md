@@ -66,6 +66,16 @@ http://localhost/Web_eco-enzim/
 - Push ke GitHub/GitLab/Bitbucket.
 - Deploy ulang di Cloudflare Pages.
 
+### 7) Cara agar perubahan gambar permanen di Cloudflare
+Untuk perubahan yang tampil publik dan tetap ada, gunakan alur berikut:
+1. Ganti file gambar asli di folder [assets/images](assets/images).
+2. Pastikan [index.html](index.html) mengarah ke nama file yang benar.
+3. Simpan perubahan di GitHub/repo Anda.
+4. Cloudflare Pages akan otomatis mendeteksi perubahan dan melakukan deploy ulang.
+5. Setelah selesai, buka URL Cloudflare Pages Anda dan cek tampilannya.
+
+> Catatan: halaman ini adalah situs statis. Jadi perubahan gambar yang permanen harus disimpan sebagai file di repo, bukan hanya lewat browser. Kalau Anda ingin sistem yang bisa diganti sendiri lewat dashboard tanpa coding, dibutuhkan solusi yang lebih lanjut seperti Cloudflare R2 + CMS atau panel admin.
+
 File utama:
 - [index.html](index.html)
 - [assets/css/styles.css](assets/css/styles.css)
