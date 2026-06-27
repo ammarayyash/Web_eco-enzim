@@ -61,6 +61,11 @@ http://localhost/Web_eco-enzim/
 
 > Jika port 8000 tidak bisa dipakai, coba `python -m http.server 8080` lalu buka `http://localhost:8080`.
 
+### 6) Menghapus preview lokal yang tersimpan di browser
+- Jika Anda sebelumnya menggunakan panel pemilik (`?owner=demangan2026`) dan melakukan perubahan preview, data gambar disimpan di Local Storage browser (hanya di komputer Anda).
+- Untuk menghapus preview lokal tanpa tombol di halaman, buka DevTools → Application → Local Storage → pilih domain `http://localhost:8000` lalu hapus keys yang diawali `ecoEnzimAsset:`.
+- Atau buka halaman dengan `?owner=demangan2026` dan klik tombol **Hapus preview lokal** di panel Mode pemilik — ini akan menghapus preview dan memuat ulang halaman.
+
 ### 6) Deploy ke Cloudflare Pages
 - Pastikan folder `assets/images/` berisi file gambar yang ingin dipakai.
 - Push ke GitHub/GitLab/Bitbucket.

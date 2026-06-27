@@ -40,6 +40,11 @@ document.addEventListener('DOMContentLoaded',function(){
     if(savedValue){
       img.src = savedValue;
     }
+    // if this image later fails to load (corrupt), remove local override
+    img.addEventListener('error', ()=>{
+      try{ localStorage.removeItem(`ecoEnzimAsset:${key}`); }catch(e){}
+      // fallback to original asset path if possible (keep existing src)
+    });
   });
 
   const revealElements = document.querySelectorAll('.reveal');
@@ -74,6 +79,17 @@ document.addEventListener('DOMContentLoaded',function(){
       const text = encodeURIComponent('Halo, saya ingin mendapat informasi pembagian Eco Enzim gratis.');
       const link = `https://wa.me/${phone.replace(/[^0-9+]/g,'')}?text=${text}`;
       window.open(link,'_blank');
+    })
+  }
+
+  // Clear preview (owner mode)
+  const clearBtn = document.getElementById('clear-preview');
+  if(clearBtn){
+    clearBtn.addEventListener('click', ()=>{
+      const keys = Object.keys(localStorage).filter(k=>k.startsWith('ecoEnzimAsset:'));
+      keys.forEach(k=>localStorage.removeItem(k));
+      alert('Preview lokal berhasil dihapus. Halaman akan dimuat ulang.');
+      location.reload();
     })
   }
 })
