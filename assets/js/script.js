@@ -76,7 +76,7 @@ document.addEventListener('DOMContentLoaded',function(){
     waBtn.addEventListener('click', (e)=>{
       e.preventDefault();
       const phone = waBtn.dataset.phone || '+628xxxxxxxxxx';
-      const text = encodeURIComponent('Halo, saya ingin mendapat informasi pembagian Eco Enzim gratis.');
+      const text = encodeURIComponent('Halo, Lopyu ‪‪❤︎‬.');
       const link = `https://wa.me/${phone.replace(/[^0-9+]/g,'')}?text=${text}`;
       window.open(link,'_blank');
     })
